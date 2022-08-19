@@ -1,6 +1,6 @@
 
 header{
-    background-color: rgb(119, 37, 88);
+    background-color: var(--color1);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -41,7 +41,7 @@ header{
     width: max-content;
 }
 .nav-menu-link:hover { 
-    background-color: rgba(223, 140, 185, 0.712);
+    background-color: var(--color2);
     transition: 0.5s;
 }
 
@@ -69,7 +69,7 @@ header{
     .nav-menu {
         flex-direction: column;
         margin: 0;
-        background-color: rgb(216, 167, 191);
+        background-color: var(--color2);
         position: fixed;
         left: 0;
         top: 60px;
@@ -89,7 +89,7 @@ header{
     }
     .nav-menu-link:hover{
         background: none;
-        color: rgb(119, 37, 88);
+        color: var(--color1);
     }
 
     .toggle {

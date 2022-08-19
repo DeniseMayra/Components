@@ -1,0 +1,83 @@
+
+
+.signinContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--modernColor1);
+}
+
+.formItem{
+    width: 300px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.formItem input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: var(--modernColor4);
+    border: none;
+    outline: 0px;
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+    padding-top: 6px;
+}
+
+
+.formItem-span{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: var(--modernColor4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: ease 0.5s;
+
+}
+
+.formItem input:focus + .formItem-span,
+.formItem input:valid + .formItem-span{
+    font-size: 0.6em;
+    color: var(--modernColor2);
+    transform: translateY(-220%);
+}
+
+.formItem-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--modernColor4);
+    overflow: hidden;
+    height: 3px;
+}
+.formItem-bottom::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--modernColor3), var(--modernColor2));
+    animation: formItemAnimation 2s linear infinite;
+}
+/* aca no funciona con el + */
+.formItem input:focus ~ .formItem-bottom::before,
+.formItem input:valid ~ .formItem-bottom::before
+{
+    left: 0;
+}
+
+@keyframes formItemAnimation{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 300px;
+    }
+}
