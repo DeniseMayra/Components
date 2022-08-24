@@ -44,7 +44,7 @@
 .formItem input:focus + .formItem-span,
 .formItem input:valid + .formItem-span{
     font-size: 0.6em;
-    color: var(--modernColor2);
+    color: var(--mixRed3);
     transform: translateY(-220%);
 }
 
@@ -63,7 +63,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, var(--modernColor3), var(--modernColor2));
+    background: linear-gradient(90deg, var(--mixRed1), var(--mixRed2), var(--mixRed3));
     animation: formItemAnimation 2s linear infinite;
 }
 /* aca no funciona con el + */
