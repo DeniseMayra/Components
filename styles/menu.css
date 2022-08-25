@@ -1,6 +1,6 @@
 
 header{
-    background-color: var(--color1);
+    background: linear-gradient(90deg, var(--modernColor2), var(--modernColor3));
     height: 80px;
     position: fixed;
     width: 100%;
